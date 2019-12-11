@@ -1,0 +1,65 @@
+<div class="container-fluid">
+		<div class="container">
+			<div class="formBox">
+				{{#each errors}}
+				<div class="alert alert-danger mt-2">{{text}}</div>
+				{{else}}
+				{{/each}}
+				<form  action="/posts/addpost" method="POST" enctype="multipart/form-data">
+						<div class="row">
+							<div class="col-sm-12">
+								<h1>add posts</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox ">
+									<div class="inputText">photos</div>
+									<input type="file" name="photo" class="input">
+								</div>
+							</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox ">
+									<div class="inputText">Title</div>
+									<input type="text" name="title" class="input">
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">phone</div>
+									<input type="text" name="phone" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Email</div>
+									<input type="text" name="email" class="input">
+								</div>
+							</div>
+
+							
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox">
+									<div class="inputText">Details</div>
+									<textarea class="input" name="details"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="submit" name="" class="button" value="Send Message">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>

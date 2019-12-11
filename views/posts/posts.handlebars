@@ -1,0 +1,26 @@
+<div class="container">
+     
+     <h1 class="datah1" class="text-center">Posted Data</h1>
+     <div class="row ">
+        
+
+{{#each post}}
+   
+       
+        <div class="col-md-4 datacol">
+            <img  class="postimage" src={{trimString photo.0.path}}>
+            <h1> title:{{title}}</h1>
+            <span class="badge badge-danger">{{formatDate date day="numeric" month="long"}}</span>
+            <span class="badge badge-danger">{{formatRelative date postDate}}</span>
+                <p>phone:{{phone}}</p>
+                <p>email:{{email}}</p>
+                <p>details:{{details}}</p>
+           
+        </div>
+      
+ 
+    {{else}}
+    <h1 class="text-danger">no posts</h1>
+    {{/each}}
+    </div>
+</div>
